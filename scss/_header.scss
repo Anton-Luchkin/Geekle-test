@@ -1,0 +1,92 @@
+.header {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  right: 10px;
+  background-color: #171716;
+  border: 1px solid #73f9bc;
+  padding: 0px 15px 0px 10px;
+
+  @include for-size(tablet-landscape) {
+    position: static;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-left:none; 
+    border-right: none ; 
+    border-top: none; 
+    padding: 0px 100px 0px 150px;
+  }
+
+  @include for-size(Full) {
+    padding: 0px 380px 0px 380px;
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+
+    @include for-size(desktop) {
+      height: 100px;
+    }
+  }
+
+  &__logo-img {
+    max-width: 100%;
+
+    @include for-size(desktop) {
+      display: none;
+    }
+  }
+
+  &__logo-img-desk {
+    max-width: 100%;
+    display: none;
+
+    @include for-size(desktop) {
+      display: block;
+    }
+  }
+
+  &__navigation {
+    width: 355px;
+    position: absolute;
+    height: 40px;
+    overflow: auto;
+    background-color: #171716;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+    border: 1px solid #73f9bc;
+    top: 10px;
+    right: -1px;
+
+    &.active {
+      top: 40px;
+      opacity: 1;
+    }
+
+    @include for-size(tablet-landscape) {
+      position: static;
+      opacity: 1;
+      border: none;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  align-items: center;
+
+  &__link {
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+    line-height: 17px;
+    text-transform: uppercase;
+  }
+}

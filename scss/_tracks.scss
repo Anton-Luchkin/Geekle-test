@@ -1,0 +1,408 @@
+.tracs-wrapper {
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+
+  @include for-size(tablet-landscape) {
+    width: 720px;
+    padding: 0 10px;
+  }
+
+  @include for-size(Full) {
+    display: flex;
+    width: 1920px;
+    justify-content: space-between;
+  }
+}
+
+.track-container--hover:hover {
+  .tracks__title {
+    color: #73f9bc;
+  }
+  .cards {
+    border: 1px solid #73f9bc;
+    border-top: none;
+  }
+  .cards-desktop {
+    border: 1px solid #73f9bc;
+    border-top: none;
+  }
+}
+
+.tracks {
+
+  &__title {
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 45px;
+    line-height: 65px;
+    text-align: center;
+    color: #ffffff;
+
+    @include for-size(Full) {
+      font-size: 80px;
+      line-height: 116px;
+    }
+  }
+
+  &__text {
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+
+    @include for-size(tablet-landscape) {
+      width: 638px;
+      margin: 0 auto 34px      ;
+    }
+
+    @include for-size(Full) {
+      // width: 638px;
+      font-size: 30px;
+      line-height: 43px;
+      margin: 0   auto 50px;
+    }
+  }
+
+  &__nfr-title {
+    width: 300px;
+    height: 68px;
+    background: #73f9bc;
+    font-family: Jost;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 120%;
+    text-align: center;
+    color: #171716;
+
+    @include for-size(tablet-landscape) {
+      width: 700px;
+      line-height: 68px;
+    }
+    @include for-size(Full) {
+      display: none;
+    }
+  }
+
+  &__nfr-title--desk {
+    display: none;
+
+    @include for-size(Full) {
+      display: block;
+      position: absolute;
+      top: 255px;
+      width: 1900px;
+      height: 68px;
+      background: #73f9bc;
+      font-family: "Jost";
+      font-style: normal;
+      font-weight: 900;
+      font-size: 35px;
+      line-height: 65px;
+      text-align: center;
+      color: #171716;
+    }
+  }
+}
+.cards {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-top: none;
+
+  @include for-size(tablet-landscape) {
+    display: none;
+  }
+
+  &:first-of-type {
+    margin-bottom: 50px;
+  }
+
+  // .cards__item
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 10px 0px 10px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 282px;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.2);
+      margin-top: 20px;
+    }
+  }
+}
+.card {
+  // .card__foto
+
+  &__foto {
+    margin-bottom: 8px;
+    width: 100px;
+    height: 100px;
+  }
+
+  //   // .card__description
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+  }
+
+  //   .q-and-a {
+  //     position: relative;
+  //   }
+
+  .q-and-a--position {
+    position: relative;
+    left: 130px;
+  }
+
+  // .card__time
+
+  &__time {
+    font-family: "Bison";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    color: #73f9bc;
+  }
+
+  // .card__name
+
+  &__name {
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 17px;
+    color: #ffffff;
+    margin-bottom: 19px;
+  }
+
+  // .card__topic
+
+  &__topic {
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 120%;
+    color: #ffffff;
+    margin-bottom: 15px;
+  }
+}
+.show {
+  width: 140px;
+  height: 30px;
+  background: #73f9bc;
+  font-family: "Bison";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  color: #171716;
+  margin-bottom: 10px;
+}
+.add {
+  width: 140px;
+  height: 30px;
+  border: 2px solid #ffffff;
+  font-family: "Bison";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  color: #ffffff;
+  background: transparent;
+}
+
+// -------------------------
+
+.cards-desktop {
+  width: 700px;
+  display: none;
+  flex-direction: column;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-top: none;
+  margin: 0 0 50px 0;
+
+  @include for-size(tablet-landscape) {
+    display: flex;
+  }
+  @include for-size(Full) {
+    width: 940px;
+    margin: 118px 0 50px 0;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 20px 10px 0px 10px;
+
+    @include for-size(Full) {
+      width: 760px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 680px;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.2);
+      margin-top: 20px;
+    }
+  }
+}
+
+.card-desk {
+  &__logo-container {
+    border: 1px solid #73f9bc;
+    width: 100px;
+  }
+
+  &__logo {
+    width: 100%;
+  }
+
+  &__time-name-logo {
+    margin: 0 20px 0 20px;
+    width: 130px;
+
+    @include for-size(Full) {
+      width: 200px;
+   }
+  }
+
+  &__time {
+    font-family: "Bison";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    color: #73f9bc;
+    margin-bottom: 10px;
+
+    @include for-size(Full) {
+      font-size: 25px;
+    }
+
+  }
+
+  &__name {
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 29px;
+    color: #ffffff;
+    margin-bottom: 10px;
+
+    @include for-size(Full) {
+      font-size: 20px;
+    }
+  }
+
+  &__image {
+    margin-right: 40px;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+  }
+
+  &__topic {
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 32px;
+    color: #ffffff;
+    height: 64px;
+    margin-bottom: 40px;
+
+    @include for-size(Full) {
+      font-size: 22px;
+   }
+  }
+
+  .q-and-a-desk--position {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+
+  }
+
+  .card__time-q-and-a {
+    width: 100px;
+    font-size: 20px;
+    line-height: 30px;
+    color: #73f9bc;
+    margin: 0 183px 0 20px;
+
+    
+    @include for-size(Full) {
+      margin: 0 253px 0 20px;
+      font-size: 25px;
+      width: 110px;
+   }
+  }
+
+  .card__topic-q-and-a {
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 0;
+  }
+}
+
+.button-wraper {
+  display: flex;
+  justify-content: space-between;
+  width: 360px;
+  height: 40px;
+}
+.show-desk {
+  width: 160px;
+  height: 40px;
+  background: #73f9bc;
+  font-family: "Bison";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  color: #171716;
+  margin-bottom: 10px;
+}
+.add-desk {
+  width: 160px;
+  height: 40px;
+  border: 2px solid #ffffff;
+  font-family: "Bison";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  color: #ffffff;
+  background: transparent;
+}

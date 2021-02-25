@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+   <div class="wrapper">
+      <!-- HEADER -->
+      <header class="header">
+         <div class="header__body">
+            <!-- Logo -->
+            <a href="#" class="header__logo-link">
+               <img class="header__logo-img" src="img/mobile-logo.png" alt="geekle">
+               <img class="header__logo-img-desk" src="img/logo-desk.png" alt="geekle">
+            </a>
+            <!-- Menu burger -->
+            <div class="header__burger">
+               <span></span>
+            </div>
+            <!-- Main menu -->
+            <nav class="header__navigation">
+               <ul class="menu">
+                  <li class="menu__item">
+                     <a href="#" class="menu__link">Agenda</a>
+                  </li>
+                  <li class="menu__item">
+                     <a href="#" class="menu__link">Tickets</a>
+                  </li>
+                  <li class="menu__item">
+                     <a href="#" class="menu__link">team</a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+      </header>
+      <!-- MAIN -->
+      <main>
+         <!-- Booking mobile -->
+         <section class="booking mobile">
+            <h1 class="booking__title">Worldwide Software Architecture Summit</h1>
+            <div class="booking__image">
+               <img src="img/img1.png" alt="#">
+            </div>
+            <div class="button-container">
+               <button class="button" disabled>buy ticket</button>
+            </div>
+            <div class="booking__text">
+               <p class="booking__text-title">Dive into</p>
+               <p class="booking__text-subtitle">Cloud Architecture Optimization:</p>
+               <p class="booking__text-subtitle--color">Automation&Testing</p>
+            </div>
+            <p class="booking__event-date">ONLINE, JANUARY 26-27. DURATION: 10:00-19:00</p>
+         </section>
+         <!-- Booking desktop -->
+         <section class="booking-desk desktop">
+            <div class="booking-desk__container">
+               <div class="booking-desk__text-blok">
+                  <h1 class="booking-desk__title">Worldwide Software Architecture Summit</h1>
+                  <div class="booking-desk__text">
+                     <p class="booking-desk__text-title">Dive into</p>
+                     <p class="booking-desk__text-subtitle">Cloud Architecture Optimization:</p>
+                     <p class="booking-desk__text-subtitle--color">Automation&Testing</p>
+                     <div class="button-container-desk">
+                        <button class="button-desk" disabled>buy ticket</button>
+                     </div>
+                  </div>
+               </div>
+               <div class="booking-desk__image">
+                  <img src="img/img2.png" alt="#">
+               </div>
+               <p class="booking-desk__event-date">ONLINE, JANUARY 26-27. DURATION: 10:00-19:00</p>
+            </div>
+         </section>
+         <!-- Agenda -->
+         <section class="agenda">
+            <h2 class="agenda__title">Agenda</h2>
+            <h3 class="agenda__subtitle">choose your time zone</h3>
+            <p class="agenda__text">Some talks are pre-recorded due to speakers’ time-zone differences</p>
+            <div class="time-mobile">
+               <select class="time-mobile__list">
+                  <option class="time-mobile__list-item">CET (Central European Time)</option>
+                  <option class="time-mobile__list-item">CST (Central Standard Time)</option>
+                  <option class="time-mobile__list-item">Vendor track</option>
+               </select>
+            </div>
+            <div class="time-desktop">
+               <div class="time-desktop__list">
+                  <button class="time-desktop__list-item active" type="button">CET (Central European Time)</button>
+                  <button class="time-desktop__list-item" type="button" disabled>CST (Central Standard Time)</button>
+                  <button class="time-desktop__list-item" type="button" disabled>Vendor track</button>
+               </div>
+            </div>
+         </section>
+         <!-- Tracks -->
+         <div class="tracs-wrapper">
+            <h2 class="tracks__nfr-title--desk">NFR – Non-functional requirenment</h2>
+            <!-- Track container first -->
+            <div class="track-container--hover">
+               <div class="tracks">
+                  <h2 class="tracks__title">Career Track</h2>
+                  <p class="tracks__text">Aimed to upgrade Developers’ skills to evolve to Software Architect</p>
+                  <h2 class="tracks__nfr-title">NFR – Non-functional requirenment</h2>
+               </div>
+               <!-- Cards mobile first blok-->
+               <ul class="cards">
+                  <li class="cards__item card">
+                     <div class="card__image">
+                        <img class="card__foto" src="img/Alexander Kuttig 1.png" alt="Alexander Kuttig">
+                        <div class="card__logo-container">
+                           <img class="card__logo" src="img/Horizon Alpha 1.png" alt="Horizon Alpha">
+                        </div>
+                     </div>
+                     <div class="card__description">
+                        <p class="card__time">10:10 — 10:40</p>
+                        <p class="card__name">Alexander Kuttig</p>
+                        <p class="card__topic">"Using AWS and Google Cloud in a cost-efficient way"</p>
+                        <button class="show">show abstract</button>
+                        <button class="add">add to calendar</button>
+                     </div>
+                  </li>
+                  <li class="cards__item card">
+                     <div class="card__images">
+                        <img class="card__foto" src="img/Alexander Kuttig 2.png" alt="Ivan Rigoni">
+                        <div class="card__logo-container">
+                           <img class="card__logo" src="img/logo DAZN.png" alt="DAZN">
+                        </div>
+                     </div>
+                     <div class="card__description">
+                        <p class="card__time">10:40 — 11:10</p>
+                        <p class="card__name">Ivan Rigoni</p>
+                        <p class="card__topic">"A Million Requests in 10 minutes"</p>
+                        <button class="show">show abstract</button>
+                        <button class="add">add to calendar</button>
+                     </div>
+                  </li>
+                  <li class="cards__item card">
+                     <div class="card__images">
+                        <img class="card__foto" src="img/Alexander Kuttig 3.png" alt="Alexander Kuttig">
+                        <div class="card__logo-container">
+                           <img class="card__logo" src="img/logo salesforce.png" alt="salesforce">
+                        </div>
+                     </div>
+                     <div class="card__description">
+                        <p class="card__time">11:10 — 11:40</p>
+                        <p class="card__name">Alexander Kuttig</p>
+                        <p class="card__topic">"Resilient Cloud Architecture Design Patterns"</p>
+                        <button class="show">show abstract</button>
+                        <button class="add">add to calendar</button>
+                     </div>
+                  </li>
+                  <li class="cards__item card q-and-a">
+                     <div class="card__description q-and-a--position">
+                        <p class="card__time">11:40 — 12:10</p>
+                        <p class="card__name">Q&A</p>
+                     </div>
+                  </li>
+               </ul>
+               <!-- Cards desktop first blok-->
+               <ul class="cards-desktop">
+                  <li class="cards-desktop__item card-desk">
+                     <div class="card-desk__time-name-logo">
+                        <p class="card-desk__time ">10:10 — 10:40</p>
+                        <p class="card-desk__name">Alexander Kuttig</p>
+                        <div class="card-desk__logo-container">
+                           <img class="card-desk__logo" src="img/Horizon Alpha 1.png" alt="Horizon Alpha">
+                        </div>
+                     </div>
+                     <div class="card-desk__image">
+                        <img class="card-desk__foto" src="img/Alexander Kuttig 1.png" alt="Alexander Kuttig">
+                     </div>
+                     <div class="card-desk__description">
+                        <p class="card-desk__topic">"Using AWS and Google Cloud in a cost-efficient way"</p>
+                        <div class="button-wraper">
+                           <button class="show-desk">show abstract</button>
+                           <button class="add-desk">add to calendar</button>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="cards-desktop__item card-desk">
+                     <div class="card-desk__time-name-logo">
+                        <p class="card-desk__time ">10:40 — 11:10</p>
+                        <p class="card-desk__name">Ivan Rigoni</p>
+                        <div class="card-desk__logo-container">
+                           <img class="card-desk__logo" src="img/logo DAZN.png" alt="DAZN">
+                        </div>
+                     </div>
+                     <div class="card-desk__image">
+                        <img class="card-desk__foto" src="img/Alexander Kuttig 2.png" alt="Ivan Rigoni">
+                     </div>
+                     <div class="card-desk__description">
+                        <p class="card-desk__topic">"A Million Requests in 10 minutes"</p>
+                        <div class="button-wraper">
+                           <button class="show-desk">show abstract</button>
+                           <button class="add-desk">add to calendar</button>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="cards-desktop__item card-desk">
+                     <div class="card-desk__time-name-logo">
+                        <p class="card-desk__time ">11:10 — 11:40</p>
+                        <p class="card-desk__name">Alexander Kuttig</p>
+                        <div class="card-desk__logo-container">
+                           <img class="card-desk__logo" src="img/logo salesforce.png" alt="salesforce">
+                        </div>
+                     </div>
+                     <div class="card-desk__image">
+                        <img class="card-desk__foto" src="img/Alexander Kuttig 3.png" alt="Alexander Kuttig">
+                     </div>
+                     <div class="card-desk__description">
+                        <p class="card-desk__topic">"Resilient Cloud Architecture Design Patterns"</p>
+                        <div class="button-wraper">
+                           <button class="show-desk">show abstract</button>
+                           <button class="add-desk">add to calendar</button>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="cards-desktop__item card-desk q-and-a-desk">
+                     <div class="card__description q-and-a-desk--position">
+                        <p class="card__time card__time-q-and-a">11:40 — 12:10</p>
+                        <p class="card__topic card__topic-q-and-a">Q&A</p>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+            <!-- Track container second -->
+            <div class="track-container--hover">
+               <div class="tracks">
+                  <h2 class="tracks__title">Pro Track</h2>
+                  <p class="tracks__text">Practical tech cases for Experienced Software Architects, CTOs and Senior
+                     Software
+                     Engineers</p>
+                  <h2 class="tracks__nfr-title">NFR – Non-functional requirenment</h2>
+               </div>
+               <!-- Cards mobile second blok-->
+               <ul class="cards">
+                  <li class="cards__item card">
+                     <div class="card__images">
+                        <img class="card__foto" src="img/Heidi Waterhouse.png" alt="Heidi Waterhouse">
+                        <div class="card__logo-container">
+                           <img class="card__logo" src="img/Horizon Alpha 1.png" alt="Horizon Alpha">
+                        </div>
+                     </div>
+                     <div class="card__description">
+                        <p class="card__time">10:10 — 10:40</p>
+                        <p class="card__name">Heidi Waterhouse</p>
+                        <p class="card__topic">"Breaking Strain: A story about capacities and testing"</p>
+                        <button class="show">show abstract</button>
+                        <button class="add">add to calendar</button>
+                     </div>
+                  </li>
+                  <li class="cards__item card">
+                     <div class="card__images">
+                        <img class="card__foto" src="img/Emma Thomas.png" alt="Emma Thomas">
+                        <div class="card__logo-container">
+                           <img class="card__logo" src="img/Oracle.png" alt="Oracle">
+                        </div>
+                     </div>
+                     <div class="card__description">
+                        <p class="card__time">10:40 — 11:10</p>
+                        <p class="card__name">Emma Thomas</p>
+                        <p class="card__topic">"But we wanted our solution to transmit data faster than the speed of
+                           light"</p>
+                        <button class="show">show abstract</button>
+                        <button class="add">add to calendar</button>
+                     </div>
+                  </li>
+                  <li class="cards__item card">
+                     <div class="card__images">
+                        <img class="card__foto" src="img/Michael Ratchson.png" alt="Michael Ratchson">
+                        <div class="card__logo-container">
+                           <img class="card__logo" src="img/Nasa.png" alt="Nasa">
+                        </div>
+                     </div>
+                     <div class="card__description">
+                        <p class="card__time">11:10 — 11:40</p>
+                        <p class="card__name">Michael Ritchson</p>
+                        <p class="card__topic">"Apache Tomee, a successful open source migration journey for NASA"</p>
+                        <button class="show">show abstract</button>
+                        <button class="add">add to calendar</button>
+                     </div>
+                  </li>
+                  <li class="cards__item card q-and-a">
+                     <div class="card__description q-and-a--position">
+                        <p class="card__time">11:40 — 12:10</p>
+                        <p class="card__name">Q&A</p>
+                     </div>
+                  </li>
+               </ul>
+               <!-- Cards desktop second blok-->
+               <ul class="cards-desktop">
+                  <li class="cards-desktop__item card-desk">
+                     <div class="card-desk__time-name-logo">
+                        <p class="card-desk__time ">10:10 — 10:40</p>
+                        <p class="card-desk__name">Heidi Waterhouse</p>
+                        <div class="card-desk__logo-container">
+                           <img class="card-desk__logo" src="img/Horizon Alpha 1.png" alt="Horizon Alpha">
+                        </div>
+                     </div>
+                     <div class="card-desk__image">
+                        <img class="card-desk__foto" src="img/Heidi Waterhouse.png" alt="Heidi Waterhouse">
+                     </div>
+                     <div class="card-desk__description">
+                        <p class="card-desk__topic">"Breaking Strain: A story about capacities and testing"</p>
+                        <div class="button-wraper">
+                           <button class="show-desk">show abstract</button>
+                           <button class="add-desk">add to calendar</button>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="cards-desktop__item card-desk">
+                     <div class="card-desk__time-name-logo">
+                        <p class="card-desk__time ">10:40 — 11:10</p>
+                        <p class="card-desk__name">Emma Thomas</p>
+                        <div class="card-desk__logo-container">
+                           <img class="card-desk__logo" src="img/Oracle.png" alt="Oracle">
+                        </div>
+                     </div>
+                     <div class="card-desk__image">
+                        <img class="card-desk__foto" src="img/Emma Thomas.png" alt="Emma Thomas">
+                     </div>
+                     <div class="card-desk__description">
+                        <p class="card-desk__topic">"But we wanted our solution to transmit data faster than the speed
+                           of light"</p>
+                        <div class="button-wraper">
+                           <button class="show-desk">show abstract</button>
+                           <button class="add-desk">add to calendar</button>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="cards-desktop__item card-desk">
+                     <div class="card-desk__time-name-logo">
+                        <p class="card-desk__time ">11:10 — 11:40</p>
+                        <p class="card-desk__name">Michael Ritchson</p>
+                        <div class="card-desk__logo-container">
+                           <img class="card-desk__logo" src="img/Nasa.png" alt="Nasa">
+                        </div>
+                     </div>
+                     <div class="card-desk__image">
+                        <img class="card-desk__foto" src="img/Michael Ratchson.png" alt="Michael Ratchson">
+                     </div>
+                     <div class="card-desk__description">
+                        <p class="card-desk__topic">"Apache Tomee, a successful open source migration journey for NASA"
+                        </p>
+                        <div class="button-wraper">
+                           <button class="show-desk">show abstract</button>
+                           <button class="add-desk">add to calendar</button>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="cards-desktop__item card-desk q-and-a-desk">
+                     <div class="card__description q-and-a-desk--position">
+                        <p class="card__time card__time-q-and-a">11:40 — 12:10</p>
+                        <p class="card__topic card__topic-q-and-a">Q&A</p>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </main>
+   </div>
+   <!-- SCRIPT -->
+   <script src="./js/index.js"></script>
+</body>
+</html>

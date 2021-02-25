@@ -1,0 +1,16 @@
+.wrapper {
+  margin: 0 auto;
+  position: relative;
+  background-color: #171716;
+  background-repeat: repeat-x;
+  background-image: url(../img/mobileBg.png);
+
+  @include for-size(tablet-landscape) {
+    background-image: linear-gradient(
+        180deg,
+        rgba(23, 23, 22, 0) 67.59%,
+        #171716 108.44%
+      ),
+      url(../img/BG-desk.png);
+  }
+}

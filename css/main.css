@@ -1,0 +1,1174 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@500;700;900&display=swap");
+@font-face {
+  font-family: 'Bison';
+  src: local("Bison Bold"), local("Bison-Bold"), url("../fonts/Bison-Bold.woff2") format("woff2"), url("../fonts/Bison-Bold.woff") format("woff"), url("../fonts/Bison-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.wrapper {
+  margin: 0 auto;
+  position: relative;
+  background-color: #171716;
+  background-repeat: repeat-x;
+  background-image: url(../img/mobileBg.png);
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(67.59%, rgba(23, 23, 22, 0)), color-stop(108.44%, #171716)), url(../img/BG-desk.png);
+    background-image: linear-gradient(180deg, rgba(23, 23, 22, 0) 67.59%, #171716 108.44%), url(../img/BG-desk.png);
+  }
+}
+
+.header {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  right: 10px;
+  background-color: #171716;
+  border: 1px solid #73f9bc;
+  padding: 0px 15px 0px 10px;
+}
+
+@media (min-width: 768px) {
+  .header {
+    position: static;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    padding: 0px 100px 0px 150px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .header {
+    padding: 0px 380px 0px 380px;
+  }
+}
+
+.header__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 40px;
+}
+
+@media (min-width: 992px) {
+  .header__body {
+    height: 100px;
+  }
+}
+
+.header__logo-img {
+  max-width: 100%;
+}
+
+@media (min-width: 992px) {
+  .header__logo-img {
+    display: none;
+  }
+}
+
+.header__logo-img-desk {
+  max-width: 100%;
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .header__logo-img-desk {
+    display: block;
+  }
+}
+
+.header__navigation {
+  width: 355px;
+  position: absolute;
+  height: 40px;
+  overflow: auto;
+  background-color: #171716;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  border: 1px solid #73f9bc;
+  top: 10px;
+  right: -1px;
+}
+
+.header__navigation.active {
+  top: 40px;
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .header__navigation {
+    position: static;
+    opacity: 1;
+    border: none;
+  }
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu__link {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  line-height: 17px;
+  text-transform: uppercase;
+}
+
+.header__burger {
+  display: block;
+  position: relative;
+  width: 15px;
+  height: 7px;
+  z-index: 3;
+}
+
+@media (min-width: 768px) {
+  .header__burger {
+    display: none;
+  }
+}
+
+.header__burger span {
+  position: absolute;
+  background-color: #ffffff;
+  width: 100%;
+  height: 1px;
+  top: 3px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.header__burger::before, .header__burger::after {
+  content: "";
+  background-color: #ffffff;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.header__burger::before {
+  top: 0;
+}
+
+.header__burger::after {
+  bottom: 0;
+}
+
+.header__burger.active span {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.header__burger.active::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 3px;
+}
+
+.header__burger.active::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 3px;
+}
+
+.booking {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(67.59%, rgba(23, 23, 22, 0)), color-stop(108.44%, #171716));
+  background-image: linear-gradient(180deg, rgba(23, 23, 22, 0) 67.59%, #171716 108.44%);
+}
+
+.booking__title {
+  max-width: 600px;
+  padding-top: 68px;
+  font-family: "Bison";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 43px;
+  line-height: 52px;
+  text-transform: uppercase;
+  color: #73f9bc;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.booking__image {
+  margin: 0 auto 37px;
+  text-align: center;
+}
+
+.booking__text {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.booking__text-title {
+  font-family: "Bison";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+.booking__text-subtitle {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 120%;
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+.booking__text-subtitle--color {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 120%;
+  color: #73f9bc;
+  opacity: 1;
+  margin-bottom: 25px;
+}
+
+.booking__event-date {
+  width: 300px;
+  height: 37px;
+  background: #171716;
+  border: 1px solid #73f9bc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  font-family: Bison;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 35px;
+  text-transform: uppercase;
+  color: #73f9bc;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .booking__event-date {
+    width: 600px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+  }
+}
+
+.button-container {
+  display: block;
+  position: absolute;
+  top: 486px;
+  left: 38px;
+  right: 38px;
+  height: 55px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .button-container {
+    top: 535px;
+  }
+}
+
+@media (min-width: 992px) {
+  .button-container {
+    top: 595px;
+  }
+}
+
+.button {
+  width: 100%;
+  background: #ffffff;
+  font-family: "Bison";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 48px;
+  color: #171716;
+}
+
+.mobile {
+  display: block;
+}
+
+@media (min-width: 1200px) {
+  .mobile {
+    display: none;
+  }
+}
+
+.booking-desk {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(67.59%, rgba(23, 23, 22, 0)), color-stop(108.44%, #171716));
+  background-image: linear-gradient(180deg, rgba(23, 23, 22, 0) 67.59%, #171716 108.44%);
+}
+
+.booking-desk__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  width: 1160px;
+  margin: 47px auto 0;
+}
+
+.booking-desk__text-blok {
+  width: 600px;
+  padding-top: 25px;
+}
+
+.booking-desk__title {
+  font-family: "Bison";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 84px;
+  text-transform: uppercase;
+  color: #73f9bc;
+  margin-bottom: 30px;
+}
+
+.booking-desk__text {
+  width: 393px;
+  margin-bottom: 40px;
+}
+
+.booking-desk__text-title {
+  font-family: "Bison";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  opacity: 0.5;
+  margin-bottom: 10px;
+}
+
+.booking-desk__text-subtitle {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 120%;
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+.booking-desk__text-subtitle--color {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 120%;
+  color: #73f9bc;
+  opacity: 1;
+  margin-bottom: 25px;
+}
+
+.booking-desk__image {
+  text-align: center;
+}
+
+.booking-desk__event-date {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 66px;
+  background: #171716;
+  border: 1px solid #73f9bc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  font-family: Bison;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 65px;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: #73f9bc;
+  text-align: center;
+}
+
+.button-container-desk {
+  display: block;
+  width: 360px;
+  height: 65px;
+}
+
+.button-desk {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  font-family: "Bison";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 48px;
+  color: #171716;
+}
+
+.desktop {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .desktop {
+    display: block;
+  }
+}
+
+.agenda {
+  background-color: #171716;
+  padding-top: 100px;
+}
+
+.agenda__title {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 87px;
+  text-align: center;
+  color: #73f9bc;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1200px) {
+  .agenda__title {
+    font-size: 120px;
+    line-height: 173px;
+  }
+}
+
+.agenda__subtitle {
+  font-family: "Bison";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1200px) {
+  .agenda__subtitle {
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 30px;
+  }
+}
+
+.agenda__text {
+  width: 300px;
+  margin: 0 auto 30px;
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+@media (min-width: 1200px) {
+  .agenda__text {
+    width: 100%;
+    font-size: 20px;
+    line-height: 29px;
+    margin: 0 auto 50px;
+  }
+}
+
+.time-mobile {
+  width: 300px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+@media (min-width: 1200px) {
+  .time-mobile {
+    display: none;
+  }
+}
+
+.time-mobile__list {
+  height: 55px;
+  width: 300px;
+  background: #73f9bc;
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: #171716;
+  text-align: center;
+  padding: 0px 8px 0px 8px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  margin-bottom: 45px;
+}
+
+.time-mobile__list-item {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: #171716;
+}
+
+.time-mobile::after {
+  display: block;
+  content: url(../img/Polygon.png);
+  width: 14px;
+  height: 12px;
+  position: absolute;
+  top: 21px;
+  right: 8px;
+}
+
+.time-desktop {
+  width: 1161px;
+  margin: 0 auto;
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .time-desktop {
+    display: block;
+  }
+}
+
+.time-desktop__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 8px 0px 8px;
+  cursor: pointer;
+  margin-bottom: 45px;
+}
+
+.time-desktop__list-item {
+  height: 65px;
+  width: 387px;
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 65px;
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  background: transparent;
+}
+
+.time-desktop .active {
+  font-weight: 500;
+  color: #ffffff;
+  border: 1px solid #73F9BC;
+  background: #73F9BC;
+  color: #171716;
+}
+
+.tracs-wrapper {
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .tracs-wrapper {
+    width: 720px;
+    padding: 0 10px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .tracs-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 1920px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.track-container--hover:hover .tracks__title {
+  color: #73f9bc;
+}
+
+.track-container--hover:hover .cards {
+  border: 1px solid #73f9bc;
+  border-top: none;
+}
+
+.track-container--hover:hover .cards-desktop {
+  border: 1px solid #73f9bc;
+  border-top: none;
+}
+
+.tracks__title {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 45px;
+  line-height: 65px;
+  text-align: center;
+  color: #ffffff;
+}
+
+@media (min-width: 1900px) {
+  .tracks__title {
+    font-size: 80px;
+    line-height: 116px;
+  }
+}
+
+.tracks__text {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .tracks__text {
+    width: 638px;
+    margin: 0 auto 34px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .tracks__text {
+    font-size: 30px;
+    line-height: 43px;
+    margin: 0   auto 50px;
+  }
+}
+
+.tracks__nfr-title {
+  width: 300px;
+  height: 68px;
+  background: #73f9bc;
+  font-family: Jost;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 120%;
+  text-align: center;
+  color: #171716;
+}
+
+@media (min-width: 768px) {
+  .tracks__nfr-title {
+    width: 700px;
+    line-height: 68px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .tracks__nfr-title {
+    display: none;
+  }
+}
+
+.tracks__nfr-title--desk {
+  display: none;
+}
+
+@media (min-width: 1900px) {
+  .tracks__nfr-title--desk {
+    display: block;
+    position: absolute;
+    top: 255px;
+    width: 1900px;
+    height: 68px;
+    background: #73f9bc;
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 65px;
+    text-align: center;
+    color: #171716;
+  }
+}
+
+.cards {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #ffffff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-top: none;
+}
+
+@media (min-width: 768px) {
+  .cards {
+    display: none;
+  }
+}
+
+.cards:first-of-type {
+  margin-bottom: 50px;
+}
+
+.cards__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20px 10px 0px 10px;
+}
+
+.cards__item::after {
+  content: "";
+  display: block;
+  width: 282px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-top: 20px;
+}
+
+.card__foto {
+  margin-bottom: 8px;
+  width: 100px;
+  height: 100px;
+}
+
+.card__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 150px;
+}
+
+.card .q-and-a--position {
+  position: relative;
+  left: 130px;
+}
+
+.card__time {
+  font-family: "Bison";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #73f9bc;
+}
+
+.card__name {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 17px;
+  color: #ffffff;
+  margin-bottom: 19px;
+}
+
+.card__topic {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 120%;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.show {
+  width: 140px;
+  height: 30px;
+  background: #73f9bc;
+  font-family: "Bison";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  color: #171716;
+  margin-bottom: 10px;
+}
+
+.add {
+  width: 140px;
+  height: 30px;
+  border: 2px solid #ffffff;
+  font-family: "Bison";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  color: #ffffff;
+  background: transparent;
+}
+
+.cards-desktop {
+  width: 700px;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #ffffff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-top: none;
+  margin: 0 0 50px 0;
+}
+
+@media (min-width: 768px) {
+  .cards-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 1900px) {
+  .cards-desktop {
+    width: 940px;
+    margin: 118px 0 50px 0;
+  }
+}
+
+.cards-desktop__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20px 10px 0px 10px;
+}
+
+@media (min-width: 1900px) {
+  .cards-desktop__item {
+    width: 760px;
+  }
+}
+
+.cards-desktop__item::after {
+  content: "";
+  display: block;
+  width: 680px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-top: 20px;
+}
+
+.card-desk__logo-container {
+  border: 1px solid #73f9bc;
+  width: 100px;
+}
+
+.card-desk__logo {
+  width: 100%;
+}
+
+.card-desk__time-name-logo {
+  margin: 0 20px 0 20px;
+  width: 130px;
+}
+
+@media (min-width: 1900px) {
+  .card-desk__time-name-logo {
+    width: 200px;
+  }
+}
+
+.card-desk__time {
+  font-family: "Bison";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 30px;
+  color: #73f9bc;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1900px) {
+  .card-desk__time {
+    font-size: 25px;
+  }
+}
+
+.card-desk__name {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 29px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1900px) {
+  .card-desk__name {
+    font-size: 20px;
+  }
+}
+
+.card-desk__image {
+  margin-right: 40px;
+}
+
+.card-desk__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 360px;
+}
+
+.card-desk__topic {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+  color: #ffffff;
+  height: 64px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 1900px) {
+  .card-desk__topic {
+    font-size: 22px;
+  }
+}
+
+.card-desk .q-and-a-desk--position {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.card-desk .card__time-q-and-a {
+  width: 100px;
+  font-size: 20px;
+  line-height: 30px;
+  color: #73f9bc;
+  margin: 0 183px 0 20px;
+}
+
+@media (min-width: 1900px) {
+  .card-desk .card__time-q-and-a {
+    margin: 0 253px 0 20px;
+    font-size: 25px;
+    width: 110px;
+  }
+}
+
+.card-desk .card__topic-q-and-a {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+.button-wraper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 360px;
+  height: 40px;
+}
+
+.show-desk {
+  width: 160px;
+  height: 40px;
+  background: #73f9bc;
+  font-family: "Bison";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  color: #171716;
+  margin-bottom: 10px;
+}
+
+.add-desk {
+  width: 160px;
+  height: 40px;
+  border: 2px solid #ffffff;
+  font-family: "Bison";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  color: #ffffff;
+  background: transparent;
+}

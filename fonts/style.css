@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Bison';
+    src: local('Bison Bold'), local('Bison-Bold'),
+        url('Bison-Bold.woff2') format('woff2'),
+        url('Bison-Bold.woff') format('woff'),
+        url('Bison-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }

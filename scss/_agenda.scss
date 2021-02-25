@@ -1,0 +1,146 @@
+.agenda {
+  background-color: #171716;
+  padding-top: 100px;
+
+  &__title {
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 87px;
+    text-align: center;
+    color: #73f9bc;
+    text-transform: uppercase;
+
+    @include for-size(big-desktop) {
+      font-size: 120px;
+      line-height: 173px;
+    }
+  }
+
+  &__subtitle {
+    font-family: "Bison";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+    @include for-size(big-desktop) {
+      font-size: 50px;
+      line-height: 60px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text {
+    width: 300px;
+    margin: 0 auto 30px;
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #ffffff;
+
+    @include for-size(big-desktop) {
+      width: 100%;
+      font-size: 20px;
+      line-height: 29px;
+      margin: 0 auto 50px;
+    }
+  }
+}
+.time-mobile {
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+
+  @include for-size(big-desktop) {
+    display: none;
+  }
+
+  &__list {
+    height: 55px;
+    width: 300px;
+    background: #73f9bc;
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: #171716;
+    text-align: center;
+    padding: 0px 8px 0px 8px;
+    appearance: none;
+    cursor: pointer;
+    margin-bottom: 45px;
+  }
+
+  &__list-item {
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: #171716;
+  }
+
+  &::after {
+    display: block;
+    content: url(../img/Polygon.png);
+    width: 14px;
+    height: 12px;
+    position: absolute;
+    top: 21px;
+    right: 8px;
+  }
+}
+
+.time-desktop {
+  width: 1161px;
+  margin: 0 auto;
+  display: none;
+
+  @include for-size(big-desktop) {
+    display: block;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 8px 0px 8px;
+    cursor: pointer;
+    margin-bottom: 45px;
+  }
+
+  &__list-item {
+    height: 65px;
+    width: 387px;
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 65px;
+    text-align: center;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    background: transparent;
+  }
+
+  .active {
+   font-weight: 500;
+   color: #ffffff;
+   border: 1px solid #73F9BC;
+   background: #73F9BC;
+   color: #171716;
+ }
+}
